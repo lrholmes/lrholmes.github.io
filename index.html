@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <section class="recent">
+    <h1>Recent Project</h1>
+    <div class="information">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ducimus nihil inventore laborum harum neque, non facilis, et dolor, reprehenderit dolores porro similique, voluptates dolore fugit ad. Neque, quisquam, voluptatibus.</p>
+    </div>
+    <div class="image">
+      <img src="" alt="">
+    </div>
+  </section>
+
+  <section class="other">
+    {% for project in site.projects %}
+      <div class="project">
+        <a href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+      </div>
+    {% endfor %}
+  </section>
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
