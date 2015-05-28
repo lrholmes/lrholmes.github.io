@@ -1,25 +1,39 @@
 ---
-layout: default
+layout: home
 ---
 
 <div class="home">
 
   <section class="recent">
-    <h1>Recent Project</h1>
-    <div class="information">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ducimus nihil inventore laborum harum neque, non facilis, et dolor, reprehenderit dolores porro similique, voluptates dolore fugit ad. Neque, quisquam, voluptatibus.</p>
+    <div class="about">
+      <h1>Recent Project</h1>
+      <div class="information">
+        <h5>IBA Archive</h5>
+        <h6>Wordpress: Design and Development</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ducimus nihil inventore laborum harum neque, non facilis, et dolor, reprehenderit dolores porro similique, voluptates dolore fugit ad. Neque, quisquam, voluptatibus.</p>
+      </div>
     </div>
     <div class="image">
-      <img src="" alt="">
+      <img src="/assets/recent/iba.jpg" alt="IBA Archive Website">
     </div>
   </section>
 
   <section class="other">
+    <h1>Other Projects</h1>
+    <div class="projects">
+    <div class="owl-carousel">
     {% for project in site.projects %}
-      <div class="project">
-        <a href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
-      </div>
+        <a href="{{ project.url | prepend: site.baseurl }}">
+        <div class="project">
+          <h5>{{ project.title }}</h5>  
+          <h6>{{ project.roles }}</h6>
+          <img src="{{ site.url }}/assets/projects/{{ project.image }}" alt="{{ project.title }}">
+          <p>{{ project.excerpt }}</p>
+        </div>
+        </a>
     {% endfor %}
+    </div>
+    </div>
   </section>
 
   <h1 class="page-heading">Posts</h1>

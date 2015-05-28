@@ -1,0 +1,65 @@
+.home {
+	section {
+		width: 90%;
+		margin: 0 auto;
+		padding-bottom: 85px;
+		@extend %clearfix;
+		h1 {
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			border-bottom: $grey-color-light solid 5px;
+		}
+
+		&.recent {
+			margin-left: 10%;
+			.about {
+				float: left;
+				width: 55%;
+				.information {
+					width: 60%;
+				}
+			}
+			.image {
+				float: left;
+				width: 45%;
+				overflow: hidden;
+				img {
+					max-width: 125%;
+				}
+			}
+		}
+
+		&.other {
+			margin-right: 10%;
+			h1 {
+				text-align: right;
+			}
+
+			.projects {
+				margin-left: 15%;
+			}
+
+			a {
+				color: #333;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			.project {
+				margin: 25px;
+				padding: 20px;
+				//box-shadow: 0px 0px 10px black;
+				img {
+					border-top: 5px $grey-color-light solid;
+					padding-top: 10px;
+					max-width: 100%;
+				}
+				p {
+					font-size: 12px;
+					text-align: justify;
+				}
+			}
+		}
+	}
+}

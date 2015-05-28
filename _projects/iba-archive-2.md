@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "IBA Archive"
-header-image: "iba.jpg"
+header-image: "big-pic.jpg"
 image: "iba.jpg"
 roles: Wordpress Design and Development
 excerpt: >
