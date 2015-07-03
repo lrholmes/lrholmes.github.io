@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: project
+date: 2014-05-20
 title:  "IBA Archive"
 header-image: "iba.jpg"
 image: "iba.jpg"

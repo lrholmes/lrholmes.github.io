@@ -2,14 +2,14 @@
 layout: home
 ---
 
-<div class="home">
+<div class="home animate">
 
   <section class="recent">
     <div class="about">
       <h1>Recent Project</h1>
       <div class="information">
         <h5>IBA Archive</h5>
-        <h6>Wordpress: Design and Development</h6>
+        <h6>Wordpress: Design and Development | Logo Design</h6>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ducimus nihil inventore laborum harum neque, non facilis, et dolor, reprehenderit dolores porro similique, voluptates dolore fugit ad. Neque, quisquam, voluptatibus.</p>
       </div>
     </div>
@@ -21,21 +21,22 @@ layout: home
   <section class="other">
     <h1>Other Projects</h1>
     <div class="projects">
-    <div class="owl-carousel">
-    {% for project in site.projects %}
-        <a href="{{ project.url | prepend: site.baseurl }}">
+    {% assign items = site.projects | sort: 'date' %}
+    {% for project in items reversed %}
+        <a class="project-link" href="{{ project.url | prepend: site.baseurl }}">
         <div class="project">
-          <h5>{{ project.title }}</h5>  
-          <h6>{{ project.roles }}</h6>
+          <div class="heading">
+            <h5>{{ project.title }}</h5>
+            <h6>{{ project.roles }}</h6>
+          </div>
           <img src="{{ site.url }}/assets/projects/{{ project.image }}" alt="{{ project.title }}">
           <p>{{ project.excerpt }}</p>
         </div>
         </a>
     {% endfor %}
     </div>
-    </div>
   </section>
-
+  <div class="wrapper">
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
@@ -51,5 +52,5 @@ layout: home
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  </div>
 </div>
