@@ -55,6 +55,9 @@
 </footer>
 
 <script src="{{ site.url }}/js/jquery.min.js"></script>
-<script src="{{ site.url }}/js/owl.carousel.js"></script>
 <script src="{{ site.url }}/js/jquery.history.js"></script>
+{% if page.layout == 'home' %}
+<script src="{{ site.url }}/js/canvas.js"></script>
+{% endif %}
+
 <script src="{{ site.url }}/js/script.js"></script>

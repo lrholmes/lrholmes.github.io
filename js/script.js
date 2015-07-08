@@ -49,17 +49,26 @@ function transition(fromPage, toPage, selected, selectedIndex, data) {
 	var pageSelector = "." + fromPage;
 	var margin = '-' + $('#frame').height() + 'px';
 
+	if (toPage == "post") {
+		if (selected.hasClass('project-link')) {
+			console.log("...to post page");
+			fixPosition(selected);
+		} else {
+			toPage = "page";
+		}
+	}
+
 	if (fromPage == "post") {
-		$('.post').css({
-			'top': '2000px'
-		});
 		//$('#frame').css({
 		//	'margin-top': '-1000px'
 		//});
 		if (toPage == "home" && saveElement) {
-			window.setTimeout(function(){
+			$('html,body').animate({
+				scrollTop: 0
+			}, 200, function(){
 				returnToPosition();
-			},400);
+				return;
+			});
 		} else {
 			$('#frame').css('margin-top', margin);
 			$('.project').fadeOut(400);
@@ -81,22 +90,12 @@ function transition(fromPage, toPage, selected, selectedIndex, data) {
 		}
 	}
 
-	if (toPage == "post") {
-		console.log("...to post page");
-		fixPosition(selected);
-	}
-
-
-	//$('#frame').css({
-	//	'opacity': '0'
-	//});
 	if (fromPage == "post") {
-		//$('#frame .post').css
-		window.setTimeout(function(){
-			$('#frame').css({
-				'opacity': '0'
-			});
-		}, 300);
+		//window.setTimeout(function(){
+			//$('#frame').css({
+			//	'opacity': '0'
+			//});
+		//}, 300);
 	}
 
 	$('footer').css({
@@ -189,31 +188,31 @@ function fixPosition(element) {
 	saveTarget = el;
 	var clone = el.clone();
 	var element = {
-		w: el.width(),
-		h: el.height(),
+		w: el.outerWidth(),
+		h: el.outerHeight(),
 		x: el.offset().top-scroll,
 		y: el.offset().left
 	}
 	saveElement = element;
 	saveScroll = scroll;
 	el.css({
-		'transition':' opacity 100ms',
-		'opacity': 0
+		'transition':' opacity 100ms'
+		//'opacity': 0
 	});
-	clone.prependTo('.page-content');
 
 	//pickup elements in clone
 	var pageTitle = clone.children('.heading');
 	clone.css({
 		'position':'fixed',
-		'top': Math.ceil(element.x) + 'px',
-		'left': Math.ceil(element.y) + 'px',
-		'padding' : 0,
+		'top': element.x + 'px',
+		'left': element.y + 'px',
+		//'padding' : 0,
+		'margin' : 0,
 		'height': element.h,
 		'width': element.w,
 		'z-index': 3
 	});
-	clone.children('p').fadeOut('slow');
+	clone.prependTo('.page-content');
 
 	window.setTimeout(function(){
 		// move whole element
@@ -224,6 +223,7 @@ function fixPosition(element) {
 			'margin': 0,
 			'width':'100%'
 		});
+		clone.children('p').fadeOut('slow');
 
 		// move heading
 		pageTitle.css({
@@ -253,61 +253,67 @@ function fixPosition(element) {
 }
 
 function returnToPosition() {
-		$('html,body').animate({
-			scrollTop: 0
-		}, 200);
-		$('.projects .project:eq('+saveIndex+')').css('opacity', 0);
-		window.setTimeout(function(){
-		//$('.single .project').prependTo('.page-content');
-		$('.page-content > .project').css({
-			'position': 'fixed',
-			'top': 0,
-			'left': 0,
-			'margin': 0,
-			'width':'100%',
-			'padding': 0,
-			'z-index': '3'
+
+			$('.post').css({
+				'top': '2000px'
 			});
 
-			$('.page-content > .project .heading').css({
+			$('.projects .project:eq('+saveIndex+')').css('opacity', 0);
+			window.setTimeout(function(){
+			//$('.single .project').prependTo('.page-content');
+			$('#frame').css({
+				'opacity': '0'
+			});
+			
+			$('.page-content > .project').css({
 				'position': 'fixed',
-				'padding': '20px',
-				'top' : '100px',
-				'left' : '100px',
-				'background-color': 'rgba(250,250,250,0.6)',
-				'font-size': '3em'
-			});
-
-		},200);
-
-		$('html,body').animate({
-			scrollTop: saveScroll
-		}, 350);
-
-		window.setTimeout(function(){
-			if (saveElement) {
-				$('.page-content > .project').css({
-					'position' : 'fixed',
-					'top': saveElement.x + 'px',
-					'left': saveElement.y + 'px',
-					'padding': 0,
-					'margin' : $(window).width()*0.01 + 'px',
-					'height': saveElement.h,
-					'width': saveElement.w,
+				'top': 0,
+				'left': 0,
+				'margin': 0,
+				'width':'100%',
+				'padding': 0,
+				'z-index': '3'
 				});
-				$('.page-content > .project .heading').removeAttr('style');
-				//saveTarget.css('opacity', '1');
-			} else {
 
-			}
-		}, 800);
-		window.setTimeout(function(){
-			$('.page-content > .project').fadeOut(800, function() {
-				this.remove();
-			});
-			$('.projects .project:eq('+saveIndex+')').animate({
-				'opacity': 1
-			}, 400);
-	}, 1000);
+				$('.page-content > .project .heading').css({
+					'position': 'fixed',
+					'padding': '20px',
+					'top' : '-100px',
+					'left' : '100px',
+					'background-color': 'rgba(250,250,250,0.6)',
+					'font-size': '3em'
+				});
 
+				$('html,body').animate({
+					scrollTop: saveScroll
+				}, 50);
+
+			},200);
+
+			window.setTimeout(function(){
+				if (saveElement) {
+					$('.page-content > .project .heading').removeAttr('style');
+					$('.page-content > .project').css({
+						'position' : 'fixed',
+						'top': saveElement.x + 'px',
+						'left': saveElement.y + 'px',
+						//'padding': 0,
+						'margin' : 0,
+						'height': saveElement.h,
+						'width': saveElement.w,
+					});
+
+					//saveTarget.css('opacity', '1');
+				} else {
+
+				}
+			}, 800);
+			window.setTimeout(function(){
+				$('.page-content > .project').fadeOut(800, function() {
+					this.remove();
+				});
+				$('.projects .project:eq('+saveIndex+')').animate({
+					'opacity': 1
+				}, 200);
+		}, 1000);
 }
