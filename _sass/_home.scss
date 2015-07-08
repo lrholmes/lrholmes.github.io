@@ -1,3 +1,124 @@
+.title h1 {
+	font-family: Raleway;
+	font-weight: 300;
+	text-transform: uppercase;
+	animation: letterfade 3s;
+	span {
+		color: rgba(40,40,40,1);
+		display: inline-block;
+	}
+
+	#a, #w, #m {
+		animation-fill-mode: forwards;
+	}
+	#a {
+		animation: letter-a 3.5s;
+	}
+
+	#w {
+		animation: letter-w 2.5s;
+	}
+
+	#m {
+		animation: letter-m 2.5s;
+	}
+
+	span.w{
+		letter-spacing: -11px;
+		margin-right: 11px;
+		transform-origin: 75%;
+		&.rotate {
+			margin-right: 11px;
+			margin-left: 5px;
+		}
+	}
+	span.rotate {
+		animation: flip-rotate 1.5s;
+		transform: rotateX(180deg) rotateY(180deg);
+	}
+	span.flip {
+		animation: flip 1.5s;
+		transform: rotateY(180deg);
+	}
+	span:nth-child(2) {
+		animation-delay: 0.5s;
+	}
+	span:nth-child(3) {
+		animation-delay: 1s;
+	}
+}
+
+@keyframes letterfade {
+	0% {
+		color: rgba(40,40,40,0);
+	}
+	80% {
+		color: rgba(40,40,40,0);
+	}
+	100% {
+		color: rgba(40,40,40,1);
+	}
+}
+
+@keyframes letter-a {
+  0% {
+    transform: translateX(125px) rotateX(180deg) rotateY(180deg);
+  }
+
+	45% {
+		transform: translateX(125px) rotateX(180deg) rotateY(180deg);
+	}
+
+  65% {
+    transform: translateX(0px) rotateX(180deg) rotateY(180deg);
+  }
+	85% {
+		transform: translateX(0px) rotateX(180deg) rotateY(180deg);
+	}
+	100% {
+		transform: translateX(0px) rotateX(180deg) rotateY(180deg);
+	}
+}
+
+@keyframes letter-w {
+	0% {
+    transform: translateX(75px) rotateY(180deg);
+  }
+	25% {
+		transform: translateX(75px) rotateY(180deg);
+	}
+  45% {
+    transform: translateX(0px) rotateY(180deg);
+  }
+	65% {
+		transform: translateX(0px) rotateY(180deg);
+	}
+	100% {
+		transform: translateX(0px) rotateY(0deg);
+	}
+}
+
+@keyframes letter-m {
+	0% {
+    transform: translateX(-98px) rotateX(0) rotateY(180deg);
+  }
+	25% {
+		transform: translateX(-98px) rotateX(0) rotateY(180deg);
+	}
+
+  45% {
+    transform: translateX(0px) rotateX(0) rotateY(180deg);
+  }
+	65% {
+		transform: translateX(0px) rotateX(180deg) rotateY(180deg);
+	}
+	100% {
+		transform: translateX(0px) rotateX(180deg) rotateY(0deg);
+	}
+}
+
+
+
 .home {
 	overflow: hidden;
 	section {
