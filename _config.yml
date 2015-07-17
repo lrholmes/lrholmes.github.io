@@ -3,7 +3,7 @@ title: Lawrence Holmes
 email: holmes.lr@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Bournemouth University student studying Digital Media Design,
-  currently on placement at [placement position].
+  currently on placement at digitalSHIFT.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
 twitter_username: lawrence

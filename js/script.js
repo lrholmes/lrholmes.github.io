@@ -70,8 +70,24 @@ function transition(fromPage, toPage, selected, selectedIndex, data) {
 				return;
 			});
 		} else {
-			$('#frame').css('margin-top', margin);
-			$('.project').fadeOut(400);
+			if (fromPage == "post") {
+				$('html').animate({
+					scrollTop:0
+				}, 200, function(){
+					$('.post').css({
+						'top': '2000px',
+						'opacity':0
+					});
+					window.setTimeout(function(){
+						$('#frame').css('margin-top', margin);
+						$('#frame > .project').fadeOut(200);
+					},300);
+				});
+
+			} else {
+				$('#frame').css('margin-top', margin);
+				$('.project').fadeOut(400);
+			}
 		}
 	}
 
@@ -184,6 +200,7 @@ function fixPosition(element) {
 	var scroll = $(window).scrollTop();
 	var screenWidth = $(window).width();
 
+	$('#nextFrame').addClass('invisible')
 	var el = element.children('.project');
 	saveTarget = el;
 	var clone = el.clone();
@@ -242,9 +259,9 @@ function fixPosition(element) {
 			'opacity':'1'
 		});
 		$(window).scrollTop(0);
-		clone.css({
-			'position': 'absolute'
-			});
+		// clone.css({
+		// 	'position': 'absolute'
+		// 	});
 		var newClone = clone.clone();
 		newClone.prependTo('#nextFrame');
 		console.log("attached to nextFrame, and positioned absolute");
@@ -264,7 +281,7 @@ function returnToPosition() {
 			$('#frame').css({
 				'opacity': '0'
 			});
-			
+
 			$('.page-content > .project').css({
 				'position': 'fixed',
 				'top': 0,

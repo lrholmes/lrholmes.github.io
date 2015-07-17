@@ -2,7 +2,7 @@
 layout: project
 date: 2014-06-25
 title:  "Farnham Ice"
-header-image: "farnham-ice.jpg"
+project-link: http://farnham-ice.co.uk/
 image: "farnham-ice.jpg"
 roles: Web Design and Development
 excerpt: >

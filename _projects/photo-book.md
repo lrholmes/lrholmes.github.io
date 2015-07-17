@@ -9,11 +9,22 @@ excerpt: >
   I lead the development of this iOS app, built to tie in with the Magna Carta exhibition at Salisbury Cathedral. The app was developed over the course of two months, using Apple's recently introduced programming language Swift, and Xcode.
 ---
 
-## Project Overview
+## Project overview
 <div class="videoWrapper"><iframe src="https://player.vimeo.com/video/128327297?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-This project has been an amazing learning experience for me. When we started, I had no prior knowledge of developing for mobile devices, Swift, or Xcode, and now, at the end of the project, I feel like I can manage quite well. Through the process of developing this application I've noticed my skill-set becoming broader - I can now very quickly troubleshoot problems, and my ability to construct layouts in Xcode's Interface Builder is much stronger than when I started.
 
-I found myself towards the end being able to implement new features rapidly, which I believe has contributed towards making the application that extra bit more interesting and useful (the font size feature being an example of this).
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+For our final second year project we were provided a live brief, and asked to devise, design and develop an app for visitors to the [Magna Carta Exhibition at Salisbury Cathedral](http://www.salisburycathedral.org.uk/magna-carta "Magna Carta exhibition website").
+In my group, we came up with Photo Book, an app that is designed to complement the photo-taking experience for visitors, by providing descriptions for each of the notable photo subjects. The idea behind this is that users will be able to look back at their photos from the exhibition, and see all of the relevant information about the subject of their photograph.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## My role
+I developed the application from scratch using Swift and Xcode, learning a lot along the way. I had to learn and implement the following features:
+
+* Scrolling navigation, to swipe through the app page by page
+* Ability to jump to page from the home
+* Integrating camera functionality to take photos in-app
+* Accessing the device's gallery to import photos
+* Sharing to Twitter
+
+Those features were all a part of our initial plans for the application, but the client also requested some more features:
+
+* Ability to theme the app (I introduced colour schemes and font-size options for this)
+* Ability to reset the data

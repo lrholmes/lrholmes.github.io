@@ -4,8 +4,20 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+![My Face](/assets/my-big-face.jpg){:.my-face}
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+### Hello.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+
+Thanks for visiting my portfolio website. I'm Lawrence Holmes, a student at [Bournemouth University](http://bournemouth.ac.uk/), and currently on placement at [digitalSHIFT](http://digitalshift.co.uk).
+
+I **design** and **develop** for the web, using modern frontend technologies like **HTML5**, **Sass** and **JavaScript**, and also work with backend technologies such as **PHP** with **SQL** and **NodeJS**. I am proficient working with content management systems such as **WordPress**, and **Joomla**.
+
+I also dabble in **iOS development** with **Swift**.
+
+
+Outside of design and development, I have a passion for **photography**. If you do too, or would like to see my work, then do check out my [500px page](https://500px.com/holmes).
+
+### Contact
+
+If you'd like to contact me, simply email me at [holmes.lr@gmail.com](mailto:holmes.lr@gmail.com).

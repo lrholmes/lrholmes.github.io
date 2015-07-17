@@ -15,6 +15,9 @@ layout: default
     <header class="post-header">
       <h1 class="post-title">{{ page.title }}</h1>
       <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      {% if page.project-link %}
+      <p class="post-meta"><a target="_blank" href="{{page.project-link}}">View the project</a></p>
+      {% endif %}
     </header>
 
     <article class="post-content">
