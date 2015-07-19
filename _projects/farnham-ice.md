@@ -10,6 +10,17 @@ excerpt: >
 ---
 
 ## Project Overview
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Static one page website built for a small, local ice supply business.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Features:
+
+* One Page design
+* Responsive
+* Logo/Brand design
+
+### Logo Design
+The client wanted something that would stand out amongst the competition, so after having researched other ice supply brands, I designed a modern and minimal logo that achieves this.
+![Farnham Ice Logo](/assets/projects/farnham-ice/logo.jpg)
+
+### Website
+![Farnham Ice Website](/assets/projects/farnham-ice/screenshot.jpg)
