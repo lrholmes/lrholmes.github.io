@@ -6,7 +6,7 @@
 
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Roboto", Arial, "Lucida Grande", sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -30,6 +30,8 @@ $on-laptop:        800px;
 
 
 // typography
+
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,300,900);
 
 h1 {
 	font-family: Playfair Display;
