@@ -8,7 +8,10 @@ var mouseX, mouseY, mousePX, mousePY, pAv, prevLine, width=1, threshold=15;
 function init(){
   canvasDimensions();
 
-  draw();
+  $(document).ready(function() {
+    draw();
+  });
+
 }
 
 init();
@@ -72,6 +75,8 @@ function draw() {
 	pAv = diffAv;
 	requestAnimationFrame(draw);
 }
+
+$(window).scrollTop(0);
 
 $('.page-content').css({
   'position':'relative',
