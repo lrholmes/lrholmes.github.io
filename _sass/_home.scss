@@ -20,6 +20,10 @@
 				position: absolute;
 				bottom: 85px;
 				left: 0;
+				a {
+					color: $grey-color-dark;
+					padding: 25px;
+				}
 			}
 			.about {
 				float: left;
