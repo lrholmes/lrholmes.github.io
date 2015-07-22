@@ -6,6 +6,20 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <meta property="og:site_name" content="Lawrence Holmes">
+  <meta property="og:title" content="Lawrence Holmes">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="http://lawrenceholmes.co.uk/">
+  <meta property="og:image" content="{{ "/assets/image.jpg" | prepend: site.baseurl }}">
+  <meta property="og:image:width" content="768">
+  <meta property="og:image:height" content="1184">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="profile:first_name" content="Lawrence">
+  <meta property="profile:last_name" content="Holmes">
+  <meta property="profile:gender" content="male">
+  <meta property="profile:username" content="holmes.lr">
+
   <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
