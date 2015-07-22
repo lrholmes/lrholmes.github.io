@@ -15,6 +15,12 @@
 
 		&.recent {
 			margin-left: 10%;
+			position: relative;
+			.continue {
+				position: absolute;
+				bottom: 85px;
+				left: 0;
+			}
 			.about {
 				float: left;
 				width: 55%;
@@ -56,6 +62,7 @@
 	transition: all 400ms;
 	margin: 1%;
 	width: 31%;
+	min-height: 390px;
 	float: left;
 	//box-shadow: 0px 0px 10px black;
 

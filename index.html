@@ -24,9 +24,12 @@ layout: home
     <div class="image">
       <img src="/assets/recent/iba.jpg" alt="IBA Archive Website">
     </div>
+    <div class="continue bounce">
+      <a href="#other"><i class="fa fa-chevron-down"></i></a>
+    </div>
   </section>
 
-  <section class="other">
+  <section id="other" class="other">
     <h1>Other Projects</h1>
     <div class="projects">
     {% assign items = site.projects | sort: 'date' %}
