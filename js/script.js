@@ -15,7 +15,6 @@ $(document).ready(function(){
         e.preventDefault();
         History.pushState({}, "", this.pathname);
 				selectedElement = $(this);
-				console.log(selectedElement);
 				if (selectedElement.hasClass('project-link')) {
 					saveIndex = $(this).index();
 				}
@@ -26,7 +25,7 @@ $(document).ready(function(){
     History.Adapter.bind(window, 'statechange', function(){
         var State = History.getState();
         $.get(State.url, function(data){
-            document.title = $(data).find("title").text();
+            document.title = $(data).filter("title").text();
 
             transition(currentPage(currentUrlHash), currentPage(State.hash), selectedElement, saveIndex, data);
 
@@ -59,13 +58,11 @@ $(function() {
 }
 
 function transition(fromPage, toPage, selected, selectedIndex, data) {
-	console.log("transitioning from: " + fromPage + ", to: " + toPage + ", index: " + selectedIndex);
 	var pageSelector = "." + fromPage;
 	var margin = '-' + $('#frame').height() + 'px';
 
 	if (toPage == "post") {
 		if (selected.hasClass('project-link')) {
-			console.log("...to post page");
 			fixPosition(selected);
 		} else {
 			toPage = "page";
@@ -136,7 +133,6 @@ function transition(fromPage, toPage, selected, selectedIndex, data) {
 	$('#nextFrame').html($(data).find('#frame').html());
 	window.setTimeout(function(){
 		transitionToPage(fromPage, toPage, selectedIndex, data);
-		console.log("load new page with ajax and begin transitionToPage");
 	}, 600);
 }
 
@@ -200,7 +196,6 @@ function currentPage(current) {
 }
 
 function nextPage(next) {
-	console.log(next);
 	if (next == "/") {
 		return "home";
 	} else {
@@ -210,7 +205,6 @@ function nextPage(next) {
 }
 
 function fixPosition(element) {
-	console.log("fixing position...");
 	var scroll = $(window).scrollTop();
 	var screenWidth = $(window).width();
 
@@ -248,7 +242,6 @@ function fixPosition(element) {
 
 	window.setTimeout(function(){
 		// move whole element
-		console.log("resize elements");
 		clone.css({
 			'top': 0,
 			'left': 0,
@@ -269,7 +262,6 @@ function fixPosition(element) {
 	},200);
 
 	window.setTimeout(function(){
-		console.log("make nextFrame visible");
 		$('#nextFrame').css({
 			'opacity':'1'
 		});
@@ -288,7 +280,6 @@ function fixPosition(element) {
 		// 	});
 		// var newClone = clone.clone();
 		// newClone.prependTo('#nextFrame');
-		console.log("attached to nextFrame, and positioned absolute");
 	}, 1000);
 
 }
