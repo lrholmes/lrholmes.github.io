@@ -118,6 +118,15 @@
 .social-media-list {
     list-style: none;
     margin-left: 0;
+    .fa {
+      color: $grey-color-dark;
+      min-width: 15px;
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
 }
 
 .footer-col-wrapper {

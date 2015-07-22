@@ -49,7 +49,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: (target.offset().top-65)+'px'
+          scrollTop: (target.offset().top-75)+'px'
         }, 1000);
         return false;
       }
