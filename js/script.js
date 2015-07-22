@@ -219,6 +219,7 @@ function fixPosition(element) {
 
 	//pickup elements in clone
 	var pageTitle = clone.children('.heading');
+	var pageClose = clone.children('.close');
 	clone.css({
 		'position':'fixed',
 		'top': element.x + 'px',
@@ -258,12 +259,21 @@ function fixPosition(element) {
 		$('#nextFrame').css({
 			'opacity':'1'
 		});
+		$('#nextFrame .project').remove();
 		$(window).scrollTop(0);
+		pageClose.css({
+			'top' : '100px',
+			'right' : '100px',
+			'opacity' : 1
+		});
+		pageClose.click(function() {
+			History.pushState(null,null,"/");
+		});
 		// clone.css({
 		// 	'position': 'absolute'
 		// 	});
-		var newClone = clone.clone();
-		newClone.prependTo('#nextFrame');
+		// var newClone = clone.clone();
+		// newClone.prependTo('#nextFrame');
 		console.log("attached to nextFrame, and positioned absolute");
 	}, 1000);
 
@@ -273,6 +283,12 @@ function returnToPosition() {
 
 			$('.post').css({
 				'top': '2000px'
+			});
+
+			$('.close').css({
+				'top' : 0,
+				'right' : 0,
+				'opacity' : 0
 			});
 
 			$('.projects .project:eq('+saveIndex+')').css('opacity', 0);
