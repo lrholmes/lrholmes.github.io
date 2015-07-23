@@ -1,0 +1,55 @@
+@media (max-width: 1000px) {
+  .home section.recent .about .information {
+    width: 90%;
+  }
+
+  .home section h1 {
+    padding-right: 5%;
+  }
+
+  .home section.other .projects {
+    margin-left: 0;
+  }
+
+  .project {
+    width: 45%;
+    margin: 2.5%;
+  }
+
+  .post {
+    width:90%;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .home section {
+    width: 100%;
+  }
+
+  .home section.recent {
+    .about {
+      width: 100%;
+      .information {
+        width: 65%;
+      }
+    }
+    .image {
+      width: 65%;
+    }
+    .continue {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .home section.recent .information {
+    width: 80%;
+  }
+  .project {
+    margin: 5%;
+    width: 90%;
+  }
+}
