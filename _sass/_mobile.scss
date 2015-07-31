@@ -18,6 +18,21 @@
 
   .post {
     width:90%;
+    top: 200px;
+    .heading {
+      top: 56px;
+      left: 0;
+    }
+    .close {
+      top: 56px;
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .post {
+    min-width: 850px;
   }
 }
 

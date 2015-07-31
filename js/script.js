@@ -3,6 +3,11 @@ var saveScroll = 0;
 var saveTarget;
 var saveIndex;
 
+var postTop, closePosition, headingPosition;
+
+// responsive variables for project page transitions
+
+
 $(document).ready(function(){
 
 	pageFunctions();
@@ -40,6 +45,37 @@ $(document).ready(function(){
 
 function pageFunctions() {
 // functions triggered at every page change
+
+var mq = window.matchMedia("(max-width: 1000px)");
+
+if (mq.matches) {
+	postTop = 200;
+
+	headingPosition = {
+		top: 56,
+		left: 0
+	};
+
+	closePosition = {
+		top: 56,
+		right: 0
+	};
+
+} else {
+	postTop = 400;
+
+	headingPosition = {
+		top: 100,
+		left: 100
+	};
+
+	closePosition = {
+		top: 100,
+		right: 100
+	};
+}
+
+
 // smooth scroll
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -164,7 +200,7 @@ function transitionToPage(fromPage, toPage, selectedIndex, data) {
 					$(selector).css('opacity', 1);
 				},700);
 
-				$('#nextFrame .post').css('top', '400px');
+				$('#nextFrame .post').css('top', postTop+'px');
 				$('.post-title').css({
 					'top':'0',
 					'opacity': '1'
@@ -254,8 +290,8 @@ function fixPosition(element) {
 		pageTitle.css({
 			'position': 'absolute',
 			'padding': '20px',
-			'top' : '100px',
-			'left' : '100px',
+			'top' : headingPosition.top+'px',
+			'left' : headingPosition.left+'px',
 			'background-color': 'rgba(250,250,250,0.6)',
 			'font-size': '3em'
 		});
@@ -268,8 +304,8 @@ function fixPosition(element) {
 		$('#nextFrame .project').remove();
 		$(window).scrollTop(0);
 		pageClose.css({
-			'top' : '100px',
-			'right' : '100px',
+			'top' : closePosition.top+'px',
+			'right' : closePosition.right+'px',
 			'opacity' : 1
 		});
 		pageClose.click(function() {

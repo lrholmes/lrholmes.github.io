@@ -4,7 +4,7 @@ email: holmes.lr@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   I'm a digital media designer with a passion for developing for the web. Currently on placement until September 2016 when I will be completing my final year at Bournemouth University, studying Digital Media Design.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://lrholmes.github.io/" # the base hostname & protocol for your site
+url: "http://127.0.0.1:4000/" # the base hostname & protocol for your site
 twitter_username: lawrence
 github_username:  lrholmes
 
