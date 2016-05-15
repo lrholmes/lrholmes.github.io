@@ -9,7 +9,7 @@ permalink: /about/
 ### Hello.
 
 
-Thanks for visiting my portfolio website. I'm Lawrence Holmes, a student at [Bournemouth University](http://bournemouth.ac.uk/){:target="_blank_"}, and currently on placement at [digitalSHIFT](http://digitalshift.co.uk){:target="_blank_"}.
+Thanks for visiting my portfolio website. I'm Lawrence Holmes, a student at [Bournemouth University](http://bournemouth.ac.uk/){:target="_blank_"}, and currently on placement.
 
 I **design** and **develop** for the web, using modern frontend technologies:
 
