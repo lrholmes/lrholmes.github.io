@@ -92,6 +92,7 @@ $('.site-header').css({
 
 // move on to site
 $('.landingPage .continue').click(function(){
+  $('.landingPage').css('background', 'none');
   $('.landingPage .continue').css('top', '-50%');
   window.setTimeout(function(){
     $('.landingPage canvas').css('height', 0);
