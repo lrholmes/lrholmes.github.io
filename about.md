@@ -21,10 +21,10 @@ I **design** and **develop** for the web, using modern frontend technologies:
 
 I also work with backend technologies such as **PHP** with **SQL** and **NodeJS** with **MongoDB**.
 
-I also have experience in **iOS development** with **Swift**.
+Additionally I have experience in **iOS development** with **Swift**.
 
 
-Outside of design and development, I have a passion for **photography**. If you do too, or would like to see my work, then do check out my [500px page](https://500px.com/holmes){:target="_blank_"}.
+Outside of design and development, I have a passion for **photography**. If you do too, or would like to see my work, then check out my [500px page](https://500px.com/holmes){:target="_blank_"}.
 
 ### Contact
 
