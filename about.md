@@ -11,9 +11,17 @@ permalink: /about/
 
 Thanks for visiting my portfolio website. I'm Lawrence Holmes, a student at [Bournemouth University](http://bournemouth.ac.uk/){:target="_blank_"}, and currently on placement at [digitalSHIFT](http://digitalshift.co.uk){:target="_blank_"}.
 
-I **design** and **develop** for the web, using modern frontend technologies like **HTML5**, **Sass** and **JavaScript**, and also work with backend technologies such as **PHP** with **SQL** and **NodeJS**. I am proficient working with content management systems such as **WordPress**, and **Joomla**.
+I **design** and **develop** for the web, using modern frontend technologies:
 
-I also dabble in **iOS development** with **Swift**.
+- **HTML5**
+- **Sass/PostCSS**
+- **Gulp/Webpack**
+- **React**
+- **JavaScript/ES2016**
+
+I also work with backend technologies such as **PHP** with **SQL** and **NodeJS** with **MongoDB**.
+
+I also have experience in **iOS development** with **Swift**.
 
 
 Outside of design and development, I have a passion for **photography**. If you do too, or would like to see my work, then do check out my [500px page](https://500px.com/holmes){:target="_blank_"}.
